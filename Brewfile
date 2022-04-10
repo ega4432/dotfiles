@@ -4,7 +4,6 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "nektos/tap"
 brew "act"
 brew "anyenv"
 brew "awscli"
@@ -12,6 +11,7 @@ brew "bat"
 brew "ffmpeg"
 brew "gh"
 brew "ghq"
+brew "git"
 brew "git-secrets"
 brew "go"
 brew "jq"
@@ -31,7 +31,6 @@ cask "docker"
 cask "google-chrome"
 cask "google-japanese-ime"
 cask "ngrok"
-mas "AdGuard for Safari", id: 1440147259
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694

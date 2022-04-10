@@ -16,10 +16,11 @@ jobs:
       uses: actions/checkout@v3
 
     - name: install from Brewfile
-      run: brew bundle
+      run: |
+        MAS_APPS="$(cat Brewfile | grep -v brew | grep mas | sed 's/^.*"\(.*\)".*$/\1/' | tr '\n' ' ')"
+        export HOMEBREW_BUNDLE_MAS_SKIP="$MAS_APPS"
+        export HOMEBREW_BUNDLE_BREW_SKIP="awscli go"
+        brew bundle
 
     - name: Check result
-      run: |
-        mv Brewfile Brewfile.archive
-        brew bundle dump
-        diff Brewfile Brewfile.archive
+      run: cat Brewfile.lock.json
