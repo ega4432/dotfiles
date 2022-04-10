@@ -27,10 +27,14 @@ brew "watch"
 brew "zsh-completions"
 brew "aws/tap/aws-sam-cli"
 cask "alfred"
+cask "clipy"
+cask "discord"
 cask "docker"
 cask "google-chrome"
 cask "google-japanese-ime"
 cask "ngrok"
+cask "visual-studio-code"
+cask "zoom"
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
