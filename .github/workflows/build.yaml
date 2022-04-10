@@ -15,10 +15,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: echo command path
+    - name: install from Brewfile
+      run: brew bundle
+
+    - name: Check result
       run: |
-        uname -a
-        which git
-        which brew
-        echo $SHELL
-        cat /etc/shells
+        mv Brewfile Brewfile.archive
+        brew bundle dump
+        diff Brewfile Brewfile.archive
