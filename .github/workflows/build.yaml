@@ -15,10 +15,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: echo command path
+    - name: Execute install script
       run: |
-        uname -a
-        which git
-        which brew
-        echo $SHELL
-        cat /etc/shells
+        MAS_APPS="$(cat Brewfile | grep -v brew | grep mas | sed 's/^.*"\(.*\)".*$/\1/' | tr '\n' ' ')"
+        export HOMEBREW_BUNDLE_MAS_SKIP="$MAS_APPS"
+        export HOMEBREW_BUNDLE_BREW_SKIP="awscli go"
+        ./install.sh
