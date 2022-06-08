@@ -12,4 +12,5 @@ jobs:
 
     steps:
     - name: Setup
-      run: /bin/bash -c "$(curl -fsSL "https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh")" &> /dev/null
+      run: |
+        /bin/bash -c "$(curl -fsSL "https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh")"
