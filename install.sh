@@ -1,24 +1,11 @@
-#!/bin/bash -eux
+#!/bin/bash -eu
 
 echo "Start setup ..."
 
-if ! cd $HOME/dotfiles &> /dev/null ; then
-    git clone https://github.com/ega4432/dotfiles.git $HOME/dotfiles
-    cd $HOME/dotfiles
+if ! cd $HOME/src/github.com/ega4432/dotfiles &> /dev/null ; then
+    mkdir -p $HOME/src/github.com/ega4432 && cd $_
+    git clone https://github.com/ega4432/dotfiles.git dotfiles
+    cd dotfiles
 fi
 
-if [ "$(uname)" = "Darwin" ]; then
-    if ! type brew &> /dev/null ; then
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" > /dev/null
-    else
-        echo "Since Homebrew is already installed, skip this phase and proceed."
-    fi
-    echo "install dependecies ..."
-    # brew update
-    # brew upgrade
-    # brew cleanup
-    # brew bundle install --file=Brewfile
-else
-    echo -n "Not macOS ..."
-    echo $uname
-fi
+find ./bin -type f -name '*.sh' | xargs -p -I {} bash -c {}

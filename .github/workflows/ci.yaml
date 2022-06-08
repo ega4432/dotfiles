@@ -12,5 +12,10 @@ jobs:
 
     steps:
     - name: Setup
-      run: |
-        /bin/bash -c "$(curl -fsSL "https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh")"
+      run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
+      env:
+        # Skip installing Mac App Store and software that already installed in virtual environment
+        # ref. https://github.com/actions/virtual-environments/blob/macOS-11/20220530.2/images/macos/macos-11-Readme.md
+        ENV: ci
+        HOMEBREW_BUNDLE_BREW_SKIP: 'awscli git go helm'
+        HOMEBREW_BUNDLE_MAS_SKIP: 'GarageBand iMovie Keynote Kindle LINE Numbers Pages RunCat Slack Xcode'
