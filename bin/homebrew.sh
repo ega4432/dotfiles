@@ -11,6 +11,8 @@ if [ "$(uname)" == "Darwin" -o "$(uname)" == "Linux" ]; then
     fi
 fi
 
-if [ "$(ENV)" != "ci" ]; then
+if [ "$ENV" != "ci" ]; then
     brew bundle install --file=../Brewfile
+else
+    echo -e "Skip in CI."
 fi
