@@ -1,0 +1,15 @@
+name: ci
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  ci:
+    name: ci
+    runs-on: macos-latest
+
+    steps:
+    - name: Setup
+      run: /bin/bash -c "$(curl -fsSL "https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh")" &> /dev/null
