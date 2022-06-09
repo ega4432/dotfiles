@@ -9,7 +9,6 @@ fi
 home_files=(
     bashrc
     bash_profile
-    Brewfile
     gitconfig
     gitconfig_global
     vimrc
@@ -19,3 +18,6 @@ home_files=(
 for item in "${home_files[@]}"; do
     ln -nfsv "${DOTFILES}/${item}" "${HOME}/.${item}"
 done
+
+echo "---> Linking Brewfile ..."
+ln -nfsv "${DOTFILES}/Brewfile" "${HOME}/Brewfile"
