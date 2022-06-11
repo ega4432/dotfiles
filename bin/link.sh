@@ -2,9 +2,7 @@
 
 echo "---> Linking basic dotfiles ..."
 
-if [ -z "$DOTFILES" ]; then
-    export DOTFILES="$HOME/src/github.com/ega4432/dotfiles"
-fi
+DOTFILES="$HOME/src/github.com/ega4432/dotfiles"
 
 home_files=(
     bashrc

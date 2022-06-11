@@ -2,14 +2,12 @@
 
 echo "Start setup..."
 
-if [ -z "$DOTFILES" ]; then
-    export DOTFILES="$HOME/src/github.com/ega4432/dotfiles"
-fi
+GITHUB_DIR="$HOME/src/github.com/ega4432"
 
-if ! cd $DOTFILES &> /dev/null ; then
-    mkdir -p $DOTFILES && cd $_
-    git clone https://github.com/ega4432/dotfiles.git dotfiles
+if ! cd $GITHUB_DIR/dotfiles &> /dev/null ; then
+    mkdir -p $GITHUB_DIR && cd $_
+    git clone https://github.com/ega4432/dotfiles.git
     cd dotfiles
 fi
 
-find ./bin -type f -name '*.sh' | xargs -p -I {} bash -c {}
+find ./bin -type f -name '*.sh' | xargs -I {} bash -c {}
