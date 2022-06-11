@@ -11,7 +11,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - name: Setup
+    - name: Execute install script
       shell: bash
       run: |
         export ENV
