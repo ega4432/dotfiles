@@ -4,7 +4,11 @@ echo "Start setup..."
 
 GITHUB_DIR="$HOME/src/github.com/ega4432"
 
-if ! cd $GITHUB_DIR/dotfiles &> /dev/null ; then
+if ! xcode-select --print-path &> /dev/null; then
+    xcode-select --install
+fi
+
+if ! cd $GITHUB_DIR/dotfiles &> /dev/null; then
     mkdir -p $GITHUB_DIR && cd $_
     git clone https://github.com/ega4432/dotfiles.git
     cd dotfiles
