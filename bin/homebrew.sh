@@ -3,9 +3,9 @@
 cd "$(dirname "$0")"
 echo "---> Setup homebrew..."
 
-if [ "$(uname)" == "Darwin" -o "$(uname)" == "Linux" ]; then
+if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "Linux" ]; then
     if ! type brew &> /dev/null ; then
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &> /dev/null
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     else
         echo "Homebrew is already installed."
     fi

@@ -1,5 +1,7 @@
 #!/bin/bash -eu
 
+cd "$(dirname "$0")"
+
 echo "---> Linking basic dotfiles ..."
 
 DOTFILES="$HOME/src/github.com/ega4432/dotfiles"
