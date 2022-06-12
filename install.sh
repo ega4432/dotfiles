@@ -4,6 +4,8 @@ echo "Start setup..."
 
 GIT_CLONE_DIR="$HOME/src/github.com/ega4432"
 
+echo "$USER ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/"$USER"
+
 if ! xcode-select --print-path &> /dev/null; then
     echo "---> Installing command line tools ..."
     xcode-select --install
