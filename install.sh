@@ -15,4 +15,4 @@ if ! cd "$GIT_CLONE_DIR/dotfiles" &> /dev/null; then
     cd dotfiles
 fi
 
-find bin/ -type f -name '*.sh' -print0 | xargs -I {} bash -c {}
+find bin/ -type f -name '*.sh' -exec bash {} \;

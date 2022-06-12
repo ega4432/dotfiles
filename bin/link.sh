@@ -21,3 +21,5 @@ done
 
 echo "---> Linking Brewfile ..."
 ln -nfsv "${DOTFILES}/Brewfile" "${HOME}/Brewfile"
+
+echo "Linked successfully!"

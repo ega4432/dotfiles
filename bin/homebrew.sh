@@ -5,8 +5,7 @@ echo "---> Setup homebrew..."
 
 if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "Linux" ]; then
     if ! type brew &> /dev/null ; then
-        read -rsp "Please input your password: " PASSWORD; echo
-        echo "$PASSWORD" | NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     else
         echo "Homebrew is already installed."
     fi
