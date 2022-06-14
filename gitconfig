@@ -1,7 +1,3 @@
-[user]
-  email = 38056766+ega4432@users.noreply.github.com
-  name  = ega4432
-
 [core]
   default   = current
   quotepath = false
@@ -58,3 +54,11 @@
 [ghq]
   root = ~/src
   user = ega4432
+
+# For [user] section
+[include]
+  path = ~/.gitconfig.local
+
+# For work
+[includeIf "gitdir:~/src/git.company.com/"]
+  path = ~/.gitconfig.work
