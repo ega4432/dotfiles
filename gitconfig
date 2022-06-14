@@ -1,0 +1,64 @@
+[core]
+  default   = current
+  quotepath = false
+  editor    = vim
+
+[color]
+  diff   = auto
+  status = auto
+  branch = auto
+  ui     = true
+
+[alias]
+  a   = add
+  ap  = add --patch
+  s   = status
+  ss  = status --short
+  c   = commit
+  cl  = clone
+  cm  = commit --message
+  cma = commit --amend
+  co  = checkout
+  cob = checkout -b
+  b   = branch
+  ba  = branch --all
+  bmg = branch --merged
+  bd  = branch --delete
+  bda = !git branch --merged | grep -v main | grep -v master | xargs git branch --delete
+  bm  = branch --move
+  d   = diff
+  f   = fetch --prune
+  l   = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  rs  = reset
+  rss = reset --soft HEAD^
+  rb  = rebase
+  rbc = rebase --continue
+  rba = rebase --abort
+  ps  = push
+  psf = push --force
+  pl  = pull
+  for = for-each-ref --sort=-committerdate --format=\"%(color:green) [%(authorname)] %(color:reset) %(color:yellow)%(refname:short)%(color:reset) %(subject) %(color:red)%(authordate:relative)%(color:reset)\"
+
+[init]
+  templatedir = ~/.git-templates/git-secrets
+
+[push]
+  default = current
+
+[fetch]
+  prune = true
+
+[pull]
+  rebase = false
+
+[ghq]
+  root = ~/src
+  user = ega4432
+
+# For [user] section
+[include]
+  path = ~/.gitconfig.local
+
+# For work
+[includeIf "gitdir:~/src/git.company.com/"]
+  path = ~/.gitconfig.work
