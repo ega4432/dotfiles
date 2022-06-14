@@ -34,10 +34,6 @@ export KUBECONFIG=$HOME/.kube/config
 alias ll="ls -ltra"
 alias bat="bat --style='numbers,grid' --theme GitHub"
 alias g='git'
-# Delete merged branch
-alias gbd='git branch --merged | grep -v main | grep -v master | xargs git branch -d'
-alias k8s-dashboard='kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.3.1/aio/deploy/recommended.yaml'
-alias delete-k8s-dashboard='kubectl delete -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.3.1/aio/deploy/recommended.yaml'
 alias globalip="curl inet-ip.info"
 alias find="gfind"
 
