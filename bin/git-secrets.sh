@@ -1,5 +1,8 @@
 #!/bin/bash -ue
 
+cd "$(dirname "$0")"
+echo "---> Setup git-secrets ..."
+
 if ! git secrets &> /dev/null ; then
     echo "---> Installing \"git secrets\" command ..."
     brew install git-secrets

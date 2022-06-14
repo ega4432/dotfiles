@@ -1,7 +1,7 @@
 #!/bin/bash -eu
 
 cd "$(dirname "$0")"
-echo "---> Setup homebrew..."
+echo "---> Setup Homebrew ..."
 
 if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "Linux" ]; then
     if ! type brew &> /dev/null ; then

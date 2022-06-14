@@ -1,8 +1,7 @@
 #!/bin/bash -eu
 
 cd "$(dirname "$0")"
-
-echo "---> Linking basic dotfiles ..."
+echo "---> Setup symbolic links ..."
 
 DOTFILES="$HOME/src/github.com/ega4432/dotfiles"
 
@@ -15,11 +14,10 @@ home_files=(
     zshrc
 )
 
+echo "---> Linking basic dotfiles ..."
 for item in "${home_files[@]}"; do
     ln -nfsv "${DOTFILES}/${item}" "${HOME}/.${item}"
 done
 
 echo "---> Linking Brewfile ..."
 ln -nfsv "${DOTFILES}/Brewfile" "${HOME}/Brewfile"
-
-echo "Linked successfully!"
