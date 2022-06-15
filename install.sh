@@ -2,7 +2,7 @@
 
 echo "Start setup..."
 
-GIT_CLONE_DIR="$HOME/src/github.com/ega4432"
+GIT_CLONE_DIR=~/src/github.com/ega4432
 
 echo "$USER ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/"$USER"
 

@@ -50,7 +50,8 @@ alias k="kubectl"
 
 # change directory
 function peco-src () {
-  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  local selected_dir
+  selected_dir=$(ghq list -p | peco --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
     BUFFER="cd ${selected_dir}"
     zle accept-line
@@ -70,7 +71,7 @@ function peco-history() {
     tac="tail -r"
   fi
 
-  BUFFER=$(history -n 1 | eval $tac | peco --query "$LBUFFER")
+  BUFFER=$(history -n 1 | eval "$tac" | peco --query "$LBUFFER")
   CURSOR=$#BUFFER
   zle clear-screen
 }
@@ -80,7 +81,8 @@ bindkey '^r' peco-history
 
 # checkout branch
 function peco-branch() {
-  local selected_branch="$(g for | grep -v 'origin' | peco | head -n 1 | awk '{ print $2 }')"
+  local selected_branch
+  selected_branch="$(g for | grep -v 'origin' | peco | head -n 1 | awk '{ print $2 }')"
   if [ -n "$selected_branch" ]; then
     BUFFER="git checkout ${selected_branch}"
     CURSOR=$#BUFFER
