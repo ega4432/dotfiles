@@ -2,27 +2,41 @@ name: ci
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
-  ci:
-    name: ci
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Run shellcheck
+        uses: ludeeus/action-shellcheck@master
+        with:
+          severity: error
+          ignore_names: zshrc bashrc bash_profile
+
+  install:
+    name: install
     runs-on: macos-latest
 
     steps:
-    - name: Execute install script
-      shell: bash
-      run: |
-        export ENV
-        export HOMEBREW_BUNDLE_BREW_SKIP
-        export HOMEBREW_BUNDLE_MAS_SKIP
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
-      env:
-        # Skip installing Mac App Store and software that already installed in virtual environment
-        # ref. https://github.com/actions/virtual-environments/blob/macOS-11/20220530.2/images/macos/macos-11-Readme.md
-        ENV: ci
-        HOMEBREW_BUNDLE_BREW_SKIP: 'awscli git go helm'
-        HOMEBREW_BUNDLE_MAS_SKIP: 'GarageBand iMovie Keynote Kindle LINE Numbers Pages RunCat Slack Xcode'
+      - name: Execute install script
+        shell: bash
+        run: |
+          export ENV
+          export HOMEBREW_BUNDLE_BREW_SKIP
+          export HOMEBREW_BUNDLE_MAS_SKIP
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
+        env:
+          # Skip installing Mac App Store and software that already installed in virtual environment
+          # ref. https://github.com/actions/virtual-environments/blob/macOS-11/20220530.2/images/macos/macos-11-Readme.md
+          ENV: ci
+          HOMEBREW_BUNDLE_BREW_SKIP: "awscli git go helm"
+          HOMEBREW_BUNDLE_MAS_SKIP: "GarageBand iMovie Keynote Kindle LINE Numbers Pages RunCat Slack Xcode"
