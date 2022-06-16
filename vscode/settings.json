@@ -1,0 +1,26 @@
+{
+  "explorer.confirmDelete": false,
+  "[mdx]": {
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false
+  },
+  "files.autoSave": "afterDelay",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.insertFinalNewline": true,
+  "editor.wordWrap": "on",
+  "editor.scrollBeyondLastLine": false,
+  "go.toolsManagement.autoUpdate": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "files.trimTrailingWhitespace": true
+}
