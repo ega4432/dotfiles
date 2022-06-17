@@ -10,8 +10,10 @@ if type code &> /dev/null && cd $VSCODE_DOTFILES_DIR &> /dev/null ; then
     echo "---> Installing extensions from $VSCODE_DOTFILES_DIR/$EXTENSIONS_FILE ..."
 
     while read -r line; do
-        code --install-extension "${line}"
+        echo -n "."
+        code --install-extension "${line}" --force >> ../log/vscode.log 2>&1
     done < $EXTENSIONS_FILE
+    echo " Finished installation extensions successfully!"
 else
     echo "Skipped installation of extensions because the \"code\" command not found."
 fi

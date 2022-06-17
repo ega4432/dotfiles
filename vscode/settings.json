@@ -3,6 +3,9 @@
   "[mdx]": {
     "editor.tabSize": 2
   },
+  "[markdonw]": {
+    "editor.defaultFomatter": "yzhang.markdown-all-in-one"
+  },
   "[javascript]": {
     "editor.tabSize": 2
   },

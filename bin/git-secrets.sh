@@ -4,8 +4,14 @@ cd "$(dirname "$0")"
 echo "---> Setup git-secrets ..."
 
 if ! git secrets &> /dev/null ; then
-    echo "---> Installing \"git secrets\" command ..."
-    brew install git-secrets
+    GIT_CLONE_DIR=~/src/github.com/ega4432
+    echo "---> Installing \"git-secrets\" command ..."
+    cd $GIT_CLONE_DIR
+    git clone https://github.com/awslabs/git-secrets.git
+    cd git-secrets
+    make install
+    echo -n "\"git-secrets\" command has been installed successfully! "
+    type git secrets
 fi
 
 echo "---> Setup git-secrets and installing hooks files ..."
