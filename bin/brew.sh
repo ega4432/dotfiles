@@ -12,8 +12,14 @@ if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "Linux" ]; then
 fi
 
 if [ "$HOMEBREW_INSTALL_SKIP" != "true" ]; then
-    brew bundle install --file=../Brewfile 1>> ../log/brew_stdout.log 2>> ../log/brew_stderr.log
+    brew bundle --file=../Brewfile 1>> ../log/brew_stdout.log 2>> ../log/brew_stderr.log
     echo "Homebrew Formulae and Casks have been installed successfully!"
 else
     echo "Skip installation of Homebrew Formulae and Casks."
+fi
+
+if type yabai &> /dev/null && type skhd &> /dev/null ; then
+    echo "Start background daemon of yabai and skhd."
+    brew services start yabai
+    brew services start skhd
 fi
