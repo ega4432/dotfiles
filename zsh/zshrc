@@ -31,11 +31,9 @@ export DOCKER_CONTENT_TRUST=1
 export KUBECONFIG=$HOME/.kube/config
 
 # alias
-alias ll="ls -ltra"
-alias bat="bat --style='numbers,grid' --theme GitHub"
-alias g='git'
-alias globalip="curl inet-ip.info"
-alias find="gfind"
+if [ -e ~/.zsh_alias ]; then
+  source ~/.zsh_alias
+fi
 
 # starship: https://starship.rs/ja-jp/
 eval "$(starship init zsh)"
@@ -43,10 +41,6 @@ eval "$(starship init zsh)"
 # Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-
-# Docker & Kubernetes
-alias d="docker"
-alias k="kubectl"
 
 # change directory
 function peco-src () {

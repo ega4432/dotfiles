@@ -1,0 +1,10 @@
+# General
+alias ll="ls -ltra"
+alias bat="bat --style='numbers,grid' --theme GitHub"
+alias g='git'
+alias globalip="curl inet-ip.info"
+alias find="gfind"
+
+# Docker & Kubernetes
+alias d="docker"
+alias k="kubectl"

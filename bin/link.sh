@@ -11,13 +11,21 @@ home_files=(
     gitconfig
     gitconfig_global
     vimrc
-    zshrc
 )
 
 echo "---> Linking basic dotfiles ..."
 for item in "${home_files[@]}"; do
     ln -nfsv "${DOTFILES}"/"${item}" ~/."${item}"
 done
+
+if [ -d "$DOTFILES"/zsh ] && cd ../zsh &> /dev/null ; then
+    echo "---> Linking zsh files ..."
+    find . -type f | sed 's!^.*/!!' | xargs -I {} ln -nfsv $DOTFILES/zsh/{} ~/.{}
+    cd ../bin
+else
+    echo "NG .... !"
+    ls
+fi
 
 echo "---> Linking Brewfile ..."
 ln -nfsv "${DOTFILES}"/Brewfile ~/.Brewfile
