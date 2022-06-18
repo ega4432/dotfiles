@@ -20,4 +20,7 @@ for item in "${home_files[@]}"; do
 done
 
 echo "---> Linking Brewfile ..."
-ln -nfsv "${DOTFILES}"/Brewfile ~/Brewfile
+ln -nfsv "${DOTFILES}"/Brewfile ~/.Brewfile
+
+echo "--> Linking starship config ..."
+ln -nfsv "${DOTFILES}"/starship.toml ~/.config/starship.toml
