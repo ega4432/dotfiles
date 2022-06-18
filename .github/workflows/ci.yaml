@@ -39,4 +39,4 @@ jobs:
           # ref. https://github.com/actions/virtual-environments/blob/macOS-11/20220530.2/images/macos/macos-11-Readme.md
           HOMEBREW_INSTALL_SKIP: "true"
           HOMEBREW_BUNDLE_BREW_SKIP: "awscli git go helm"
-          HOMEBREW_BUNDLE_MAS_SKIP: "Kindle LINE RunCat Slack Xcode"
+          HOMEBREW_BUNDLE_MAS_SKIP: "Kindle LINE RunCat Slack"
