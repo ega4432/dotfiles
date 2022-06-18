@@ -1,9 +1,13 @@
 # General
 alias ll="ls -ltra"
 alias bat="bat --style='numbers,grid' --theme GitHub"
-alias g='git'
 alias globalip="curl inet-ip.info"
 alias find="gfind"
+
+# Git
+alias g="git"
+alias ga="git a"
+alias gs="git s"
 
 # Docker & Kubernetes
 alias d="docker"
