@@ -18,9 +18,9 @@ for item in "${home_files[@]}"; do
     ln -nfsv "${DOTFILES}"/"${item}" ~/."${item}"
 done
 
-if [ -d "$DOTFILES"/zsh ] && cd ../zsh &> /dev/null ; then
+if cd "$DOTFILES"/zsh &> /dev/null ; then
     echo "---> Linking zsh files ..."
-    find . -type f | sed 's!^.*/!!' | xargs -I {} ln -nfsv $DOTFILES/zsh/{} ~/.{}
+    find . -type f -name 'zsh*' | sed 's!^.*/!!' | xargs -I {} ln -nfsv $DOTFILES/zsh/{} ~/.{}
     cd ../bin
 else
     echo "NG .... !"

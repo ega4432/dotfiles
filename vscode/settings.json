@@ -3,9 +3,6 @@
   "[mdx]": {
     "editor.tabSize": 2
   },
-  "[markdonw]": {
-    "editor.defaultFomatter": "yzhang.markdown-all-in-one"
-  },
   "[javascript]": {
     "editor.tabSize": 2
   },
@@ -25,5 +22,6 @@
   "go.toolsManagement.autoUpdate": true,
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "terminal.integrated.fontFamily": "Hack Nerd Font"
 }
