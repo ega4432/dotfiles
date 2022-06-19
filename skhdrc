@@ -18,12 +18,12 @@ alt + shift - i : yabai -m window --insert south
 
 # Applications
 # alt - return : alacritty --working-directory $HOME/projects/github.com/JunichiSugiura
-alt - return : open /Applications/Alacritty.app
-alt - 0 : open -n /Applications/Brave\ Browser.app
-alt + shift - n : open /Applications/Notion.app
+# alt - return : open /Applications/Alacritty.app
+# alt - 0 : open -n /Applications/Brave\ Browser.app
+# alt + shift - n : open /Applications/Notion.app
 
 # close
-alt - c : yabai -m window --close
+# alt - c : yabai -m window --close
 
 # navigate
 alt - k : yabai -m window --focus stack.prev \
@@ -74,7 +74,7 @@ shift + alt - 0x2F : yabai -m window --display next \
     && yabai -m display --focus next
 
 # toggle mission control
-shift + alt - m : yabai -m space --toggle mission-control
+# shift + alt - m : yabai -m space --toggle mission-control
 
 # reset split balance
 shift + alt - e : yabai -m space --balance

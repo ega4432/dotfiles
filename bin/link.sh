@@ -10,7 +10,9 @@ home_files=(
     bash_profile
     gitconfig
     gitconfig_global
+    skhdrc
     vimrc
+    yabairc
 )
 
 echo "---> Linking basic dotfiles ..."
@@ -37,15 +39,3 @@ fi
 
 echo "--> Linking starship config ..."
 ln -nfsv "$DOTFILES"/starship.toml ~/.config/starship.toml
-
-echo "--> Linking yabai and skhd config ..."
-if [ ! -d ~/.config/yabai ]; then
-    mkdir ~/.config/yabai
-fi
-
-if [ ! -d ~/.config/skhd ]; then
-    mkdir ~/.config/skhd
-fi
-
-ln -nfsv "$DOTFILES"/yabairc ~/.config/yabai/yabairc
-ln -nfsv "$DOTFILES"/skhdrc ~/.config/skhd/skhdrc
