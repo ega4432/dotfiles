@@ -20,6 +20,6 @@ fi
 
 if type yabai &> /dev/null && type skhd &> /dev/null ; then
     echo "Start background daemon of yabai and skhd."
-    brew services start yabai
-    brew services start skhd
+    brew services restart yabai
+    brew services restart skhd
 fi

@@ -34,7 +34,13 @@ yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Electron$"           manage=off
 yabai -m rule --add app="^iTerm2$" manage=off
 
-echo "yabai configuration loaded..."
+# Border
+yabai -m config window_border on
+yabai -m config window_border_width 3
+yabai -m config active_window_border_color 0xFF40FF40
+yabai -m config normal_window_border_color 0x00FFFFFF
 
-killall limelight &> /dev/null
-limelight --config ~/.config/limelight/limelightrc &> /dev/null &
+yabai -m window --toggle border
+# yabai -m rule --add app=Terminal border=off
+
+echo "yabai configuration loaded..."

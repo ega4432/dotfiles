@@ -14,4 +14,4 @@ alias d="docker"
 alias k="kubectl"
 
 # limelight
-alias reset-lime="killall limelight &> /dev/null; limelight -c ~/.config/limelight/limelightrc &> /dev/null &"
+alias reset-yabai="brew services restart yabai"
