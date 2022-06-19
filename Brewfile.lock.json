@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "aws/tap": {
-        "revision": "701a8889d00b3b51a18955263b99d8580a1bec3c"
+        "revision": "3d65dfea8e73123facb0110c710506090a187d66"
       },
       "github/gh": {
         "revision": "209f59cda890de69b74c224982591642c21323d3"
@@ -17,7 +17,7 @@
         "revision": "8a4036b96be7143cbef0459388cf4b727efd1723"
       },
       "homebrew/core": {
-        "revision": "83433e39fd34e2ea950d445f065018ff57852598"
+        "revision": "48dc582dfc92f09c6d006c6dd5c1d931a3ef63ef"
       },
       "homebrew/services": {
         "revision": "1e53e30909247f6465d3fadbbe414f75455c8b10"
@@ -1170,7 +1170,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.2",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "83433e39fd34e2ea950d445f065018ff57852598",
+        "Homebrew/homebrew-core": "48dc582dfc92f09c6d006c6dd5c1d931a3ef63ef",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4.1",
         "macOS": "12.4"
