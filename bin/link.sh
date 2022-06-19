@@ -39,3 +39,11 @@ fi
 
 echo "--> Linking starship config ..."
 ln -nfsv "$DOTFILES"/starship.toml ~/.config/starship.toml
+
+echo "--> Linking limelight config ..."
+
+if [ ! -d ~/.config/limelight ]; then
+    mkdir -p ~/.config/limelight
+fi
+
+ln -nfsv "$DOTFILES"/limelightrc ~/.config/limelight/limelightrc
