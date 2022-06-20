@@ -32,7 +32,8 @@ yabai -m rule --add app="^Postlab$"            manage=off
 yabai -m rule --add app="^Simulator$"          manage=off
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Electron$"           manage=off
-yabai -m rule --add app="^iTerm2$" manage=off
+yabai -m rule --add app="^iTerm2$"             manage=off
+yabai -m rule --add app="^Finder$"             manage=off
 
 # Border
 yabai -m config window_border on
