@@ -45,7 +45,7 @@ alt + shift - k : yabai -m window --warp prev
 alt + shift - j : yabai -m window --warp next
 
 # full screen
-alt - space : yabai -m window --toggle zoom-fullscreen
+alt - z : yabai -m window --toggle zoom-fullscreen
 
 # resize
 alt + shift - 0x21 : yabai -m window --resize left:-40:0 \
