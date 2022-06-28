@@ -23,5 +23,7 @@
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "files.trimTrailingWhitespace": true,
-  "terminal.integrated.fontFamily": "Hack Nerd Font"
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "editor.suggest.preview": true,
+  "editor.snippetSuggestions": "top"
 }
