@@ -60,5 +60,5 @@
   path = ~/.gitconfig.local
 
 # For work
-[includeIf "gitdir:~/src/git.company.com/"]
+[includeIf "gitdir:~/src/work/"]
   path = ~/.gitconfig.work

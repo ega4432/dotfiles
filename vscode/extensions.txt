@@ -1,13 +1,18 @@
 amazonwebservices.aws-toolkit-vscode
+bierner.markdown-emoji
+bierner.markdown-footnotes
 bradlc.vscode-tailwindcss
 christian-kohler.path-intellisense
-DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
+eamodio.gitlens
 esbenp.prettier-vscode
 GitHub.vscode-pull-request-github
 golang.go
+hashicorp.terraform
 hediet.vscode-drawio
+janisdd.vscode-edit-csv
 jrebocho.vscode-random
+mechatroner.rainbow-csv
 mikestead.dotenv
 ms-azuretools.vscode-docker
 MS-CEINTL.vscode-language-pack-ja
@@ -26,6 +31,7 @@ redhat.vscode-yaml
 shardulm94.trailing-spaces
 silvenon.mdx
 soerenuhrbach.vscode-deepl
+streetsidesoftware.code-spell-checker
 timonwong.shellcheck
 vsls-contrib.codetour
 WakaTime.vscode-wakatime

@@ -4,6 +4,9 @@ alias bat="bat --style='numbers,grid' --theme GitHub"
 alias globalip="curl inet-ip.info"
 alias find="gfind"
 
+# Homebrew
+alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin brew"
+
 # Git
 alias g="git"
 alias ga="git a"
@@ -12,6 +15,7 @@ alias gs="git s"
 # Docker & Kubernetes
 alias d="docker"
 alias k="kubectl"
+alias kcc="kubectl config current-context"
 
 # limelight
 alias reset-yabai="brew services restart yabai"
