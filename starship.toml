@@ -32,7 +32,7 @@ $time\
 show_always = true
 style_user = "bg:#9A348E"
 style_root = "bg:#9A348E"
-format = '[ega4432 ]($style)'
+format = '[$user ]($style)'
 
 [directory]
 style = "bg:#DA627D"
