@@ -27,5 +27,6 @@
   "editor.suggest.preview": true,
   "editor.snippetSuggestions": "top",
   "editor.suggest.showMethods": true,
-  "editor.acceptSuggestionOnEnter": "on"
+  "editor.acceptSuggestionOnEnter": "on",
+  "cSpell.userWords": ["dotfiles", "Qiita"]
 }
