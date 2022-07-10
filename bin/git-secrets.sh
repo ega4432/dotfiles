@@ -11,7 +11,6 @@ if ! git secrets &> /dev/null ; then
     cd git-secrets
     make install
     echo -n "\"git-secrets\" command has been installed successfully! "
-    type git secrets
 fi
 
 echo "---> Setup git-secrets and installing hooks files ..."
