@@ -28,5 +28,12 @@
   "editor.snippetSuggestions": "top",
   "editor.suggest.showMethods": true,
   "editor.acceptSuggestionOnEnter": "on",
-  "cSpell.userWords": ["dotfiles", "Qiita"]
+  "cSpell.userWords": [
+    "DOCKERHUB",
+    "dotfiles",
+    "mysqld",
+    "Qiita",
+    "Subrouter"
+  ],
+  "explorer.confirmDragAndDrop": false
 }
