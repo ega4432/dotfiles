@@ -29,11 +29,19 @@
   "editor.suggest.showMethods": true,
   "editor.acceptSuggestionOnEnter": "on",
   "cSpell.userWords": [
+    "apikey",
+    "cloudnative",
     "DOCKERHUB",
     "dotfiles",
     "mysqld",
+    "NODENV",
+    "noopener",
+    "noreferrer",
     "Qiita",
-    "Subrouter"
+    "shellcheck",
+    "Subrouter",
+    "tailwindcss",
+    "zenn"
   ],
   "explorer.confirmDragAndDrop": false
 }
