@@ -25,5 +25,26 @@
   "files.trimTrailingWhitespace": true,
   "terminal.integrated.fontFamily": "Hack Nerd Font",
   "editor.suggest.preview": true,
-  "editor.snippetSuggestions": "top"
+  "editor.snippetSuggestions": "top",
+  "cSpell.userWords": [
+    "apikey",
+    "cloudnative",
+    "DOCKERHUB",
+    "dotfiles",
+    "goarch",
+    "golangci",
+    "Healthcheck",
+    "kubectl",
+    "kubernetes",
+    "mysqld",
+    "NODENV",
+    "noopener",
+    "noreferrer",
+    "Qiita",
+    "shellcheck",
+    "Subrouter",
+    "tailwindcss",
+    "zenn"
+  ],
+  "explorer.confirmDragAndDrop": false
 }

@@ -27,7 +27,6 @@ export PATH="/usr/local/sbin:$PATH"
 # Docker & k8s
 source <(kubectl completion zsh)
 source <(argocd completion zsh)
-export DOCKER_CONTENT_TRUST=1
 export KUBECONFIG=$HOME/.kube/config
 
 # alias
@@ -84,3 +83,8 @@ function peco-branch() {
 }
 zle -N peco-branch
 bindkey '^b' peco-branch
+
+# For work PC
+if [ -e ~/.zshrc.work ]; then
+  source ~/.zshrc.work
+fi
