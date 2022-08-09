@@ -3,8 +3,9 @@
 echo "Start setup..."
 
 GIT_CLONE_DIR=~/src/github.com/ega4432
-LOG_DIR=log
+LOG_DIR="$GIT_CLONE_DIR/dotfiles/log"
 
+# Requires super user priviledges
 echo "$USER ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/"$USER"
 
 if ! xcode-select --print-path &> /dev/null; then
