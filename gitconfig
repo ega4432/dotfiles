@@ -62,4 +62,4 @@
 
 # For work
 [includeIf "gitdir:~/src/work/"]
-  path = ~/.gitconfig.work
+    path = ~/.gitconfig.work

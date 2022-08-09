@@ -5,6 +5,8 @@ if ! type code &> /dev/null; then
   exit 1
 fi
 
+cd "$(dirname "$0")"
+
 TARGET="./vscode/extensions.txt"
 echo "Sync vscode extensions ..."
 
