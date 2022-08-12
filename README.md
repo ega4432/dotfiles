@@ -7,15 +7,15 @@ This is a @ega4432's dotfiles repository.
 ## Usage
 
 ```shell
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
 ```
 
 ## Development
 
 ```shell
-$ export HOMEBREW_INSTALL_SKIP="true"
+export HOMEBREW_INSTALL_SKIP="true"
 
-$ ./install.sh
+./install.sh
 ```
 
 ## LICENSE
