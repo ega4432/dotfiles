@@ -6,11 +6,13 @@ echo "---> Setup symbolic links ..."
 DOTFILES=~/src/github.com/ega4432/dotfiles
 
 home_files=(
+    asdfrc
     bashrc
     bash_profile
     gitconfig
     gitconfig_global
     skhdrc
+    tool-versions
     vimrc
     yabairc
 )

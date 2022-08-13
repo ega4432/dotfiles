@@ -15,19 +15,11 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-# anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
-
-# nodenv
-eval "$(nodenv init - --no-rehash)"
-
 export PATH="/usr/local/sbin:$PATH"
 
 # Docker & k8s
 source <(kubectl completion zsh)
 source <(argocd completion zsh)
-export DOCKER_CONTENT_TRUST=1
 export KUBECONFIG=$HOME/.kube/config
 
 # alias
@@ -84,3 +76,6 @@ function peco-branch() {
 }
 zle -N peco-branch
 bindkey '^b' peco-branch
+
+# asdf
+. $(brew --prefix asdf)/libexec/asdf.sh
