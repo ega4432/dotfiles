@@ -26,7 +26,6 @@
   "terminal.integrated.fontFamily": "Hack Nerd Font",
   "editor.suggest.preview": true,
   "editor.snippetSuggestions": "top",
-  "editor.suggest.showMethods": true,
   "editor.acceptSuggestionOnEnter": "on",
   "cSpell.userWords": [
     "apikey",

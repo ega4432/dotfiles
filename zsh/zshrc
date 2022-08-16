@@ -77,5 +77,10 @@ function peco-branch() {
 zle -N peco-branch
 bindkey '^b' peco-branch
 
+# For work PC
+if [ -e ~/.zshrc.work ]; then
+  source ~/.zshrc.work
+fi
+
 # asdf
 . $(brew --prefix asdf)/libexec/asdf.sh
