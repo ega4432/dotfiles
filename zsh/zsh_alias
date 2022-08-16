@@ -17,5 +17,26 @@ alias d="docker"
 alias k="kubectl"
 alias kcc="kubectl config current-context"
 
-# limelight
+# window manager
 alias reset-yabai="brew services restart yabai"
+
+# open chrome extensions list
+alias chex="_openAllChromeExtensionsOnBrowser"
+
+function _openAllChromeExtensionsOnBrowser() {
+    EXTENSIONS_FILE=~/src/github.com/ega4432/dotfiles/chrome-extensions.html
+    APP_PATH=/Applications/Google\ Chrome.app
+    echo "Opening $EXTENSIONS_FILE on $APP_PATH ..."
+
+    if [ "$(uname)" != "Darwin" ]; then
+        echo "Invalid OS type. This alias is allowed only macOS."
+        return
+    fi
+
+    if [ -f "$EXTENSIONS_FILE" ] && [ -d "$APP_PATH" ] ; then
+        open -a "$APP_PATH" "$EXTENSIONS_FILE"
+    else
+        echo "Not found exported chrome extions file at : $EXTENSIONS_FILE"
+        return
+    fi
+}

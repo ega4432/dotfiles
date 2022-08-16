@@ -1,3 +1,5 @@
+cask_args appdir: "/Applications"
+
 tap "aws/tap"
 tap "github/gh"
 tap "homebrew/bundle"
@@ -7,15 +9,17 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 brew "act"
-brew "anyenv"
 brew "argocd"
+brew "asdf"
 brew "awscli"
 brew "bat"
 brew "ffmpeg"
+brew "gawk"
 brew "gh"
 brew "ghq"
 brew "git"
 brew "git-secrets"
+brew "gpg"
 brew "go"
 brew "helm"
 brew "jq"
@@ -36,17 +40,23 @@ brew "watch"
 brew "yabai"
 brew "zsh-completions"
 brew "aws/tap/aws-sam-cli"
+
+cask "1password"
+cask "1password-cli"
 cask "alfred"
 cask "font-hack-nerd-font"
 cask "clipy"
 cask "discord"
 cask "docker"
-# cask "google-chrome"
-# cask "google-japanese-ime"
-# cask "iterm2"
-# cask "visual-studio-code"
+cask "google-chrome"
+cask "google-japanese-ime"
+cask "iterm2"
+cask "visual-studio-code"
 cask "zoom"
-mas "Kindle", id: 405399194
-mas "LINE", id: 539883307
-mas "RunCat", id: 1429033973
-mas "Slack", id: 803453959
+
+if OS.mac?
+  mas "Kindle", id: 405399194
+  mas "LINE", id: 539883307
+  mas "RunCat", id: 1429033973
+  mas "Slack", id: 803453959
+end

@@ -6,11 +6,13 @@ echo "---> Setup symbolic links ..."
 DOTFILES=~/src/github.com/ega4432/dotfiles
 
 home_files=(
+    asdfrc
     bashrc
     bash_profile
     gitconfig
     gitconfig_global
     skhdrc
+    tool-versions
     vimrc
     yabairc
 )
@@ -30,7 +32,7 @@ else
 fi
 
 echo "---> Linking Brewfile ..."
-ln -nfsv "${DOTFILES}"/Brewfile ~/.Brewfile
+ln -nfsv "$DOTFILES"/Brewfile ~/.Brewfile
 
 # Create .config directory
 if [ ! -d ~/.config ]; then
@@ -39,3 +41,11 @@ fi
 
 echo "--> Linking starship config ..."
 ln -nfsv "$DOTFILES"/starship.toml ~/.config/starship.toml
+
+echo "---> Linking GitHub CLI \"gh\" config files ..."
+
+if [ ! -d ~/.config/gh ]; then
+    mkdir ~/.config/gh
+fi
+
+ln -nfsv "$DOTFILES"/gh.yml ~/.config/gh/config.yml

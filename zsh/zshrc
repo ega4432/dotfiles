@@ -15,13 +15,6 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-# anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
-
-# nodenv
-eval "$(nodenv init - --no-rehash)"
-
 export PATH="/usr/local/sbin:$PATH"
 
 # Docker & k8s
@@ -88,3 +81,6 @@ bindkey '^b' peco-branch
 if [ -e ~/.zshrc.work ]; then
   source ~/.zshrc.work
 fi
+
+# asdf
+. $(brew --prefix asdf)/libexec/asdf.sh

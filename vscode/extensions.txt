@@ -3,6 +3,7 @@ bierner.markdown-emoji
 bierner.markdown-footnotes
 bradlc.vscode-tailwindcss
 christian-kohler.path-intellisense
+DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 eamodio.gitlens
 esbenp.prettier-vscode
@@ -25,6 +26,7 @@ negokaz.zenn-editor
 octref.vetur
 oderwat.indent-rainbow
 Orta.vscode-jest
+pflannery.vscode-versionlens
 PKief.material-icon-theme
 pnp.polacode
 rangav.vscode-thunder-client

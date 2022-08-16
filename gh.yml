@@ -1,0 +1,17 @@
+# What protocol to use when performing git operations. Supported values: ssh, https
+git_protocol: ssh
+# What editor gh should run when creating issues, pull requests, etc. If blank, will refer to environment.
+editor: !!null vim
+prompt: enabled
+# Aliases allow you to create nicknames for gh commands
+aliases:
+    co: pr checkout
+    watches: api /users/ega4432/subscriptions --paginate --jq .[].full_name
+    gitignore: api /gitignore/templates/$1 --jq .source
+    unwatch: api -X DELETE /repos/$1/subscription
+    s: api -X GET /search/repositories -f q="$1" --template "{{range .items}}{{.full_name}} --- {{.stargazers_count | color \"yellow\"}} ({{.description}}){{\"\\n\"}}{{end}}"
+    aliases: alias list
+    homework: issue list --assignee @me
+    open: repo view --web
+    mypr: 'pr list --state all --assignee @me'
+    create-pr: pr create --assignee @me --fill --web
