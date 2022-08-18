@@ -63,8 +63,6 @@
 # For work
 [includeIf "gitdir:~/src/github.company.com/**"]
   path = ~/.gitconfig.work
-[includeIf "gitdir:~/src/work/"]
-    path = ~/.gitconfig.work
 
 [secrets]
 	providers = git secrets --aws-provider
