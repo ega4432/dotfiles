@@ -27,6 +27,7 @@
   "editor.suggest.preview": true,
   "editor.snippetSuggestions": "top",
   "editor.acceptSuggestionOnEnter": "on",
+  "explorer.openEditors.visible": 0,
   "cSpell.userWords": [
     "apikey",
     "cloudnative",
