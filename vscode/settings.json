@@ -33,12 +33,14 @@
     "cloudnative",
     "DOCKERHUB",
     "dotfiles",
+    "elif",
     "goarch",
     "golangci",
     "Healthcheck",
     "kubectl",
     "kubernetes",
     "mysqld",
+    "nextjs",
     "NODENV",
     "noopener",
     "noreferrer",
@@ -46,6 +48,8 @@
     "shellcheck",
     "Subrouter",
     "tailwindcss",
+    "Vercel",
+    "webextensions",
     "zenn"
   ],
   "explorer.confirmDragAndDrop": false
