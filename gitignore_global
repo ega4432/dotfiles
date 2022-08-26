@@ -1,11 +1,14 @@
 *~
 *.swp
 
+# macOS
 .DS_Store
 
+# Logging
 logs
 *.log
 
+# Node
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -13,6 +16,7 @@ yarn-error.log*
 .eslintcache
 .next
 .nuxt
+build
 dist
 
 .env
