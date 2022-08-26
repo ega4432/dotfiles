@@ -1,2 +1,3 @@
 terraform 1.2.7
 nodejs 16.16.0
+awscli 2.7.27
