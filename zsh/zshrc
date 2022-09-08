@@ -15,6 +15,9 @@ if type brew &>/dev/null; then
   compinit
 fi
 
+# 1Password
+eval "$(op completion zsh)"; compdef _op op
+
 export PATH="/usr/local/sbin:$PATH"
 
 # Docker & k8s
