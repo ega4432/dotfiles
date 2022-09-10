@@ -31,7 +31,7 @@
     l   = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     rs  = reset
     rss = reset --soft HEAD^
-    rb  = rebase
+    rb  = rebase -i
     rbc = rebase --continue
     rba = rebase --abort
     ps  = push
