@@ -38,6 +38,7 @@ yabai -m rule --add app="^Docker Desktop$"       manage=off
 yabai -m rule --add app="^Webex$"                manage=off
 yabai -m rule --add app="^Cisco Webex Meetings$" manage=off
 yabai -m rule --add app="^Zoom.*$"               manage=off
+yabai -m rule --add app="^1Password$"            manage=off
 
 # Border
 yabai -m config window_border on
