@@ -30,6 +30,8 @@
   "explorer.openEditors.visible": 0,
   "cSpell.userWords": [
     "apikey",
+    "awscdk",
+    "cdktf",
     "cloudnative",
     "DOCKERHUB",
     "dotfiles",
@@ -48,9 +50,12 @@
     "shellcheck",
     "Subrouter",
     "tailwindcss",
+    "typecheck",
     "Vercel",
     "webextensions",
     "zenn"
   ],
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "files.autoGuessEncoding": true,
+  "workbench.editor.enablePreview": false
 }
