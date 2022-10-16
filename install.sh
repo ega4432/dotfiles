@@ -1,4 +1,6 @@
-#!/bin/bash -eu
+#!/usr/bin/env bash
+
+set -eu
 
 echo "Start setup..."
 
@@ -7,11 +9,6 @@ LOG_DIR="$GIT_CLONE_DIR/dotfiles/log"
 
 # Requires super user priviledges
 echo "$USER ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/"$USER"
-
-if ! xcode-select --print-path &> /dev/null; then
-    echo "---> Installing command line tools ..."
-    xcode-select --install
-fi
 
 if ! cd "$GIT_CLONE_DIR/dotfiles" &> /dev/null; then
     mkdir -p "$GIT_CLONE_DIR" && cd "$_"
@@ -23,4 +20,4 @@ if [ ! -d $LOG_DIR ];then
     mkdir $LOG_DIR
 fi
 
-find bin/ -type f -name '*.sh' -exec bash {} \;
+find bin/ -type f -name 'brew.sh' -exec bash {} \;
