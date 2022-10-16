@@ -24,7 +24,10 @@ jobs:
 
   install:
     name: install
-    runs-on: macos-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Execute install script
