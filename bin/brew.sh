@@ -2,27 +2,27 @@
 
 set -eu
 
+if [ $# != 1 ]; then
+    echo "invalid argument."
+    exit 1
+fi
+
+OS="$1"
+
 cd "$(dirname "$0")"
 echo "---> Setup Homebrew ..."
 
 echo "---> Install the required tools ..."
-OS=""
-if [ "$(uname -s)" == "Darwin" ]; then
-    OS="Mac"
+
+if [ "$OS" == "Darwin" ]; then
     if ! xcode-select --print-path &>/dev/null; then
         echo "---> Installing command line tools ..."
         xcode-select --install
     fi
-elif [ "$(uname -s | cut -c 1-5)" == "Linux" ]; then
-    OS="Linux"
+else
     apt-get update
     apt-get install build-essential procps curl file git
-else
-    echo "Your platform (\"$(uname -a)\") is not supported."
-    exit 1
 fi
-
-echo "Operating system: $OS"
 
 if ! type brew &>/dev/null ; then
     NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

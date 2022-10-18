@@ -3,7 +3,12 @@
 cd "$(dirname "$0")"
 echo "---> Setup git-secrets ..."
 
-if ! git secrets &> /dev/null ; then
+if ! type git &>/dev/null ; then
+    echo "\"git\" command not found."
+    exit 1
+fi
+
+if ! git secrets &>/dev/null ; then
     GIT_CLONE_DIR=~/src/github.com/ega4432
     echo "---> Installing \"git-secrets\" command ..."
     cd $GIT_CLONE_DIR
