@@ -10,7 +10,7 @@ fi
 OS="$1"
 
 if [ "$OS" != "Darwin" ]; then
-    echo "This process is terminated because it's not the target OS($OS)"
+    echo "Skipped this process because it's not the target OS($OS)"
     exit 0
 fi
 

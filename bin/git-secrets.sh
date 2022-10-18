@@ -1,4 +1,6 @@
-#!/bin/bash -ue
+#!/usr/bin/env bash
+
+set -ue
 
 cd "$(dirname "$0")"
 echo "---> Setup git-secrets ..."
@@ -9,12 +11,11 @@ if ! type git &>/dev/null ; then
 fi
 
 if ! git secrets &>/dev/null ; then
-    GIT_CLONE_DIR=~/src/github.com/ega4432
     echo "---> Installing \"git-secrets\" command ..."
-    cd $GIT_CLONE_DIR
+    cd ~/src/github.com/ega4432
     git clone https://github.com/awslabs/git-secrets.git
     cd git-secrets
-    make install
+    sudo make install
     echo "\"git-secrets\" command has been installed successfully! "
 fi
 

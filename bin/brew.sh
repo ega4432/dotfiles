@@ -20,8 +20,8 @@ if [ "$OS" == "Darwin" ]; then
         xcode-select --install
     fi
 else
-    apt-get update
-    apt-get install build-essential procps curl file git
+    sudo apt-get update
+    sudo apt-get install build-essential procps curl file git
 fi
 
 if ! type brew &>/dev/null ; then
