@@ -15,7 +15,7 @@ if ! git secrets &>/dev/null ; then
     git clone https://github.com/awslabs/git-secrets.git
     cd git-secrets
     make install
-    echo -n "\"git-secrets\" command has been installed successfully! "
+    echo "\"git-secrets\" command has been installed successfully! "
 fi
 
 echo "---> Setup git-secrets and installing hooks files ..."

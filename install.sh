@@ -25,8 +25,11 @@ OS="Darwin"
 if [ "$(uname -s | cut -c 1-5)" == "Linux" ]; then
     OS="Linux"
 else
-    echo "Your platform (\"$(uname -a)\") is not supported."
+    echo "Your platform is not supported."
+    uname -a
     exit 1
 fi
+
+echo "=== target OS: $OS === "
 
 find bin/ -type f -name '*.sh' -exec bash {} "$OS)" \;
