@@ -35,7 +35,7 @@ cd "$DOTFILES"/zsh
 
 if [ "$OS" != "Darwin" ]; then
     echo "---> Install zsh ..."
-    sudo apt-get install zsh
+    sudo apt-get install -y zsh
     if which zsh | tee -a /etc/shells &>/dev/null ; then
         chsh -s "$(which zsh)"
         echo "Updated login shell to \"zsh\" successfully!"
