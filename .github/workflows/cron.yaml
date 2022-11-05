@@ -1,0 +1,44 @@
+name: ci
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Run shellcheck
+        uses: ludeeus/action-shellcheck@master
+        with:
+          severity: error
+          ignore_names: zshrc bashrc bash_profile yabairc
+
+  install:
+    name: install
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+
+    steps:
+      - name: Execute install script
+        shell: bash
+        run: |
+          export HOMEBREW_INSTALL_SKIP
+          export HOMEBREW_BUNDLE_BREW_SKIP
+          export HOMEBREW_BUNDLE_MAS_SKIP
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
+        env:
+          # Skip installing Mac App Store and software that already installed in virtual environment
+          # ref. https://github.com/actions/virtual-environments/blob/macOS-11/20220530.2/images/macos/macos-11-Readme.md
+          HOMEBREW_INSTALL_SKIP: "true"
+          HOMEBREW_BUNDLE_BREW_SKIP: "awscli git go helm"
+          HOMEBREW_BUNDLE_MAS_SKIP: "Kindle LINE RunCat Slack"
