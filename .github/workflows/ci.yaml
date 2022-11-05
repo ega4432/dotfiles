@@ -32,28 +32,20 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
+      - run: echo "${{ runner.os }}"
       - uses: actions/checkout@v3
       - if: runner.os == 'Linux'
         run: echo "OS=Linux" >> $GITHUB_ENV
       - if: runner.os == 'macOS'
         run: echo "OS=Darwin" >> $GITHUB_ENV
-      - run: echo ${{ env.OS }}
-
-      # - run: /bin/bash -c ./bin/brew.sh
-      # - run: /bin/bash -c ./bin/brew.sh
-      # - run: /bin/bash -c ./bin/brew.sh
-      # - run: /bin/bash -c ./bin/brew.sh
-
-      # - name: Execute install script
-      #   shell: bash
-      #   run: |
-      #     export HOMEBREW_INSTALL_SKIP
-      #     export HOMEBREW_BUNDLE_BREW_SKIP
-      #     export HOMEBREW_BUNDLE_MAS_SKIP
-      #     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
-      #   env:
-      #     # Skip installing Mac App Store and software that already installed in virtual environment
-      #     # ref. https://github.com/actions/virtual-environments/blob/macOS-11/20220530.2/images/macos/macos-11-Readme.md
-      #     HOMEBREW_INSTALL_SKIP: "true"
-      #     HOMEBREW_BUNDLE_BREW_SKIP: "awscli git go helm"
-      #     HOMEBREW_BUNDLE_MAS_SKIP: "Kindle LINE RunCat Slack"
+      - run: ./bin/brew.sh "${{ env.OS }}"
+        env:
+          # Skip installing Mac App Store and software that already installed in virtual environment
+          # ref. https://github.com/actions/virtual-environments/blob/macOS-11/20220530.2/images/macos/macos-11-Readme.md
+          HOMEBREW_INSTALL_SKIP: "true"
+          HOMEBREW_BUNDLE_BREW_SKIP: "awscli git go helm"
+          HOMEBREW_BUNDLE_MAS_SKIP: "Kindle LINE RunCat Slack"
+      - run: ./bin/git-secrets.sh "${{ env.OS }}"
+      - run: ./bin/link.sh "${{ env.OS }}"
+      - run: ./bin/setup-mac.sh "${{ env.OS }}"
+      - run: ./bin/setup-mac.sh "${{ env.OS }}"
