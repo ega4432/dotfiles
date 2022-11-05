@@ -50,6 +50,7 @@
     "shellcheck",
     "Subrouter",
     "tailwindcss",
+    "tolerations",
     "typecheck",
     "Vercel",
     "webextensions",
