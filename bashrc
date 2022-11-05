@@ -20,4 +20,4 @@ alias goland="/usr/local/bin/goland"
 eval "$(starship init bash)"
 
 # homebrew
-eval "$(/home/linuxbrew/.linuxbrew/binenv/brew shellenv)"
+eval "\$($(brew --prefix)/bin/brew shellenv)"

@@ -26,6 +26,10 @@ fi
 
 if ! type brew &>/dev/null ; then
     NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    if [ "$OS" == "Linux" ]; then
+        test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    fi
 else
     echo "Skipped installation of Homebrew CLI because the CLI has been already installed."
 fi
