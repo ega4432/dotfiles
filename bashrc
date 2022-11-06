@@ -19,3 +19,5 @@ alias goland="/usr/local/bin/goland"
 # Starship on bash prompt ( https://starship.rs/ )
 eval "$(starship init bash)"
 
+# homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

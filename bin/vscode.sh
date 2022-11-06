@@ -1,4 +1,18 @@
-#!/bin/bash -eu
+#!/usr/bin/env bash
+
+set -eu
+
+if [ $# != 1 ]; then
+    echo "invalid argument."
+    exit 1
+fi
+
+OS="$1"
+
+if [ "$OS" != "Darwin" ]; then
+    echo "Stop the process because it supports macOS only ..."
+    exit 0
+fi
 
 VSCODE_DOTFILES_DIR=~/src/github.com/ega4432/dotfiles/vscode
 EXTENSIONS_FILE=extensions.txt

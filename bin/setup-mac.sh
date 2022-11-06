@@ -1,4 +1,18 @@
-#!/bin/bash -eu
+#!/usr/bin/env bash
+
+set -eu
+
+if [ $# != 1 ]; then
+    echo "invalid argument."
+    exit 1
+fi
+
+OS="$1"
+
+if [ "$OS" != "Darwin" ]; then
+    echo "Skipped this process because it's not the target OS($OS)"
+    exit 0
+fi
 
 echo "---> Setup macOS settings ..."
 
