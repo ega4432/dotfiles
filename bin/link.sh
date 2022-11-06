@@ -31,7 +31,9 @@ for item in "${home_files[@]}"; do
     ln -nfsv "$DOTFILES"/"$item" ~/."$item"
 done
 
-cd "$DOTFILES"/zsh
+if ! cd "$DOTFILES"/zsh &>/dev/null ; then
+    ls -ltra "$DOTFILES"
+fi
 
 if [ "$OS" != "Darwin" ]; then
     echo "---> Install zsh ..."

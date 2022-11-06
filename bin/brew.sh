@@ -12,7 +12,7 @@ OS="$1"
 cd "$(dirname "$0")"
 echo "---> Setup Homebrew ..."
 
-echo "---> Install the required tools ..."
+echo "---> Installing the required tools ..."
 
 if [ "$OS" == "Darwin" ]; then
     if ! xcode-select --print-path &>/dev/null; then

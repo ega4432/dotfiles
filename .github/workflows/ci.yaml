@@ -32,13 +32,22 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - run: echo "${{ runner.os }}"
       - uses: actions/checkout@v3
+      - run: |
+          cd $GITHUB_WORKSPACE
+          mkdir -p $HOME/src/github.com/ega4432/
+          cp -rv ../dotfiles $HOME/src/github.com/ega4432/
       - if: runner.os == 'Linux'
-        run: echo "OS=Linux" >> $GITHUB_ENV
+        run: |
+          echo "OS=Linux" >> $GITHUB_ENV
+          echo "WORK_DIR=/home/runner/src/github.com/ega4432/dotfiles"
+          echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
       - if: runner.os == 'macOS'
-        run: echo "OS=Darwin" >> $GITHUB_ENV
+        run: |
+          echo "OS=Darwin" >> $GITHUB_ENV
+          echo "WORK_DIR=/Users/runner/src/github.com/ega4432/dotfiles"
       - run: ./bin/brew.sh "${{ env.OS }}"
+        working-directory: ${{ env.WORK_DIR }}
         env:
           # Skip installing Mac App Store and software that already installed in virtual environment
           # ref. https://github.com/actions/virtual-environments/blob/macOS-11/20220530.2/images/macos/macos-11-Readme.md
@@ -46,6 +55,10 @@ jobs:
           HOMEBREW_BUNDLE_BREW_SKIP: "awscli git go helm"
           HOMEBREW_BUNDLE_MAS_SKIP: "Kindle LINE RunCat Slack"
       - run: ./bin/git-secrets.sh "${{ env.OS }}"
+        working-directory: ${{ env.WORK_DIR }}
       - run: ./bin/link.sh "${{ env.OS }}"
+        working-directory: ${{ env.WORK_DIR }}
       - run: ./bin/setup-mac.sh "${{ env.OS }}"
+        working-directory: ${{ env.WORK_DIR }}
       - run: ./bin/setup-mac.sh "${{ env.OS }}"
+        working-directory: ${{ env.WORK_DIR }}
