@@ -7,6 +7,18 @@ echo "Start setup..."
 GIT_CLONE_DIR=~/src/github.com/ega4432
 LOG_DIR="$GIT_CLONE_DIR/dotfiles/log"
 
+OS=""
+
+if [ "$(uname -s)" == "Darwin" ]; then
+    OS="Darwin"
+elif [ "$(uname -s | cut -c 1-5)" == "Linux" ]; then
+    OS="Linux"
+else
+    echo "Your platform ($(uanme -s)) is not supported."
+    uname -a
+    exit 1
+fi
+
 # Requires super user priviledges
 echo "$USER ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/"$USER"
 
@@ -18,18 +30,6 @@ fi
 
 if [ ! -d $LOG_DIR ];then
     mkdir $LOG_DIR
-fi
-
-OS=""
-
-if [ "$(uname -s)" == "Darwin" ]; then
-    OS="Darwin"
-elif [ "$(uname -s | cut -c 1-5)" == "Linux" ]; then
-    OS="Linux"
-else
-    echo "Your platform is not supported."
-    uname -a
-    exit 1
 fi
 
 echo "=== target OS: $OS === "
