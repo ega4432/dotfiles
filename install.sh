@@ -20,9 +20,11 @@ if [ ! -d $LOG_DIR ];then
     mkdir $LOG_DIR
 fi
 
-OS="Darwin"
+OS=""
 
-if [ "$(uname -s | cut -c 1-5)" == "Linux" ]; then
+if [ "$(uname -s)" == "Darwin" ]; then
+    OS="Darwin"
+elif [ "$(uname -s | cut -c 1-5)" == "Linux" ]; then
     OS="Linux"
 else
     echo "Your platform is not supported."
