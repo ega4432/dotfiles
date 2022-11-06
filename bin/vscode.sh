@@ -9,6 +9,8 @@ fi
 
 OS="$1"
 
+echo "---> Setup VSCode ..."
+
 if [ "$OS" != "Darwin" ]; then
     echo "Stop the process because it supports macOS only ..."
     exit 0

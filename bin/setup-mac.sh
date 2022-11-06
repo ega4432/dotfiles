@@ -9,12 +9,12 @@ fi
 
 OS="$1"
 
+echo "---> Setup macOS settings ..."
+
 if [ "$OS" != "Darwin" ]; then
     echo "Skipped this process because it's not the target OS($OS)"
     exit 0
 fi
-
-echo "---> Setup macOS settings ..."
 
 # Show Library folder
 chflags nohidden ~/Library

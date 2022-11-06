@@ -34,4 +34,4 @@ fi
 
 echo "=== target OS: $OS === "
 
-find bin/ -type f -name '*.sh' -exec bash {} "$OS)" \;
+find bin/ -type f -name '*.sh' -exec bash {} "$OS" \;
