@@ -14,7 +14,7 @@
     "editor.tabSize": 2,
     "editor.detectIndentation": false
   },
-  "[astro]" : {
+  "[astro]": {
     "editor.tabSize": 2,
     "editor.detectIndentation": false
   },
@@ -23,7 +23,7 @@
     "editor.detectIndentation": false
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "rome.rome"
   },
   "files.autoSave": "afterDelay",
   "workbench.iconTheme": "material-icon-theme",
@@ -64,6 +64,7 @@
     "NODENV",
     "noopener",
     "noreferrer",
+    "pnpm",
     "Qiita",
     "shellcheck",
     "Subrouter",
@@ -78,6 +79,6 @@
   ],
   "explorer.confirmDragAndDrop": false,
   "files.autoGuessEncoding": true,
-  "workbench.editor.enablePreview": false
+  "workbench.editor.enablePreview": false,
   "window.zoomLevel": 1
 }
