@@ -56,6 +56,7 @@
     "golangci",
     "Healthcheck",
     "ibmcloud",
+    "imgur",
     "kubectl",
     "kubernetes",
     "metaverse",
@@ -80,6 +81,5 @@
   ],
   "explorer.confirmDragAndDrop": false,
   "files.autoGuessEncoding": true,
-  "workbench.editor.enablePreview": false,
-  "window.zoomLevel": 1
+  "workbench.editor.enablePreview": false
 }
