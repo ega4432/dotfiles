@@ -34,7 +34,7 @@
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "files.trimTrailingWhitespace": true,
-  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
   "editor.suggest.preview": true,
   "editor.snippetSuggestions": "top",
   "editor.acceptSuggestionOnEnter": "on",
@@ -66,6 +66,7 @@
     "NODENV",
     "noopener",
     "noreferrer",
+    "Noto",
     "pnpm",
     "Qiita",
     "shellcheck",
@@ -81,5 +82,8 @@
   ],
   "explorer.confirmDragAndDrop": false,
   "files.autoGuessEncoding": true,
-  "workbench.editor.enablePreview": false
+  "workbench.editor.enablePreview": false,
+  "[python]": {
+    "editor.formatOnType": true
+  }
 }
