@@ -11,6 +11,9 @@ eamodio.gitlens
 esbenp.prettier-vscode
 exiasr.hadolint
 formulahendry.auto-rename-tag
+george-alisson.html-preview-vscode
+GitHub.copilot
+github.vscode-github-actions
 GitHub.vscode-pull-request-github
 golang.go
 hashicorp.terraform
