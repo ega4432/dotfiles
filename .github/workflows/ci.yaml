@@ -40,12 +40,12 @@ jobs:
       - if: runner.os == 'Linux'
         run: |
           echo "OS=Linux" >> $GITHUB_ENV
-          echo "WORK_DIR=/home/runner/src/github.com/ega4432/dotfiles"
+          echo "WORK_DIR=/home/runner/src/github.com/ega4432/dotfiles" >> $GITHUB_ENV
           echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
       - if: runner.os == 'macOS'
         run: |
           echo "OS=Darwin" >> $GITHUB_ENV
-          echo "WORK_DIR=/Users/runner/src/github.com/ega4432/dotfiles"
+          echo "WORK_DIR=/Users/runner/src/github.com/ega4432/dotfiles" >> $GITHUB_ENV
       - run: ./bin/brew.sh "${{ env.OS }}"
         working-directory: ${{ env.WORK_DIR }}
         env:
