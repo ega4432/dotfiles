@@ -20,8 +20,8 @@ if [ "$OS" == "Darwin" ]; then
         xcode-select --install
     fi
 else
-    sudo apt-get update
-    sudo apt-get install -y build-essential procps curl file git
+    sudo apt update
+    sudo apt install -qq build-essential procps curl file git
 fi
 
 if ! type brew &>/dev/null ; then
@@ -49,10 +49,4 @@ if [ "${HOMEBREW_INSTALL_SKIP:-false}" != "true" ]; then
     echo "Homebrew Formulae and Casks have been installed successfully!"
 else
     echo "Skip installation of Homebrew Formulae and Casks."
-fi
-
-if type yabai &>/dev/null && type skhd &>/dev/null ; then
-    echo "Start background daemon of yabai and skhd."
-    brew services restart yabai
-    brew services restart skhd
 fi

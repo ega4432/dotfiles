@@ -12,7 +12,7 @@ OS="$1"
 cd "$(dirname "$0")"
 echo "---> Setup symbolic links ..."
 
-DOTFILES=~/src/github.com/ega4432/dotfiles
+DOTFILES=~/dotfiles
 
 home_files=(
     asdfrc
@@ -20,10 +20,8 @@ home_files=(
     bash_profile
     gitconfig
     gitconfig_global
-    skhdrc
     tool-versions
     vimrc
-    yabairc
 )
 
 echo "---> Linking basic dotfiles ..."
@@ -37,7 +35,7 @@ fi
 
 if [ "$OS" != "Darwin" ]; then
     echo "---> Install zsh ..."
-    sudo apt-get install -y zsh
+    sudo apt install -qq zsh
     if which zsh | tee -a /etc/shells &>/dev/null ; then
         chsh -s "$(which zsh)"
         echo "Updated login shell to \"zsh\" successfully!"
