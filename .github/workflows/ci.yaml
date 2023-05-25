@@ -67,5 +67,8 @@ jobs:
       - run: ./bin/setup-mac.sh "${{ env.OS }}"
         working-directory: ${{ env.WORK_DIR }}
 
+      - run: ./bin/setup-ubuntu.sh "${{ env.OS }}"
+        working-directory: ${{ env.WORK_DIR }}
+
       - run: ./bin/vscode.sh "${{ env.OS }}"
         working-directory: ${{ env.WORK_DIR }}
