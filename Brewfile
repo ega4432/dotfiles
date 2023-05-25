@@ -8,54 +8,57 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
+tap "sanemat/font"
 brew "act"
 brew "argocd"
+brew "readline", link: true
 brew "asdf"
 brew "bat"
+brew "curl"
 brew "ffmpeg"
-brew "gawk"
+brew "fontforge"
 brew "gh"
 brew "ghq"
 brew "git"
 brew "git-secrets"
-brew "gpg"
-brew "go"
 brew "helm"
 brew "jq"
 brew "kind"
-brew "kubernetes-cli"
+brew "kubeseal"
 brew "mas"
 brew "mosquitto"
 brew "nginx"
 brew "peco"
 brew "podman"
 brew "shellcheck"
-brew "skhd"
 brew "starship"
 brew "tektoncd-cli"
 brew "telnet"
 brew "tree"
 brew "watch"
-brew "yabai"
+brew "yq"
 brew "zsh-completions"
 brew "aws/tap/aws-sam-cli"
 
-cask "1password"
-cask "1password-cli"
-cask "alfred"
-cask "font-hack-nerd-font"
-cask "clipy"
-cask "discord"
-cask "docker"
-cask "google-chrome"
-cask "google-japanese-ime"
-cask "iterm2"
-cask "visual-studio-code"
-cask "zoom"
-
 if OS.mac?
-  mas "Kindle", id: 405399194
-  mas "LINE", id: 539883307
-  mas "RunCat", id: 1429033973
-  mas "Slack", id: 803453959
+    cask "1password"
+    cask "1password-cli"
+    cask "alfred"
+    cask "clipy"
+    cask "discord"
+    cask "docker"
+    cask "font-hack-nerd-font"
+    cask "google-cloud-sdk"
+    cask "google-japanese-ime"
+    cask "rectangle"
+    cask "virtualbox"
+    cask "zoom"
+
+    mas "Kindle", id: 405399194
+    mas "LINE", id: 539883307
+    mas "Numbers", id: 409203825
+    mas "Pages", id: 409201541
+    mas "RunCat", id: 1429033973
+    mas "Slack", id: 803453959
+    mas "Xcode", id: 497799835
 end

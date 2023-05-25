@@ -82,9 +82,5 @@
   ],
   "explorer.confirmDragAndDrop": false,
   "files.autoGuessEncoding": true,
-  "workbench.editor.enablePreview": false,
-  "[python]": {
-    "editor.formatOnType": true
-  },
   "editor.inlineSuggest.enabled": true
 }

@@ -8,7 +8,11 @@ This is a @ega4432's dotfiles repository.
 ## Usage
 
 ```shell
+# macOS
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
+
+# Ubuntu
+/bin/bash -c "$(wget -q0 - https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
 ```
 
 ## Development

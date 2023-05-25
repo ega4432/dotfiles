@@ -33,19 +33,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
       - run: |
           cd $GITHUB_WORKSPACE
-          mkdir -p $HOME/src/github.com/ega4432/
-          cp -rv ../dotfiles $HOME/src/github.com/ega4432/
+          cp -rv ../dotfiles $HOME
+
       - if: runner.os == 'Linux'
         run: |
           echo "OS=Linux" >> $GITHUB_ENV
-          echo "WORK_DIR=/home/runner/src/github.com/ega4432/dotfiles" >> $GITHUB_ENV
+          echo "WORK_DIR=/home/runner/dotfiles" >> $GITHUB_ENV
           echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
+
       - if: runner.os == 'macOS'
         run: |
           echo "OS=Darwin" >> $GITHUB_ENV
-          echo "WORK_DIR=/Users/runner/src/github.com/ega4432/dotfiles" >> $GITHUB_ENV
+          echo "WORK_DIR=/Users/runner/dotfiles" >> $GITHUB_ENV
+
       - run: ./bin/brew.sh "${{ env.OS }}"
         working-directory: ${{ env.WORK_DIR }}
         env:
@@ -54,11 +57,18 @@ jobs:
           HOMEBREW_INSTALL_SKIP: "true"
           HOMEBREW_BUNDLE_BREW_SKIP: "awscli git go helm"
           HOMEBREW_BUNDLE_MAS_SKIP: "Kindle LINE RunCat Slack"
+
       - run: ./bin/git-secrets.sh "${{ env.OS }}"
         working-directory: ${{ env.WORK_DIR }}
+
       - run: ./bin/link.sh "${{ env.OS }}"
         working-directory: ${{ env.WORK_DIR }}
+
       - run: ./bin/setup-mac.sh "${{ env.OS }}"
         working-directory: ${{ env.WORK_DIR }}
+
+      - run: ./bin/setup-ubuntu.sh "${{ env.OS }}"
+        working-directory: ${{ env.WORK_DIR }}
+
       - run: ./bin/vscode.sh "${{ env.OS }}"
         working-directory: ${{ env.WORK_DIR }}
