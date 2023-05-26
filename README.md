@@ -12,7 +12,7 @@ This is a @ega4432's dotfiles repository.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
 
 # Ubuntu
-/bin/bash -c "$(wget -q0 - https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
+/bin/bash -c "$(wget -qO - https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
 ```
 
 ## Development
