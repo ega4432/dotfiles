@@ -13,7 +13,7 @@ echo "---> Setup extensions of Visual Studio Code ..."
 if ! type code &> /dev/null ; then
     echo "---> Installing Visual Studio Code ..."
 
-    case $(uname -o) in
+    case $(uname -s) in
         Darwin)
             brew install --cask visual-studio-code
 
