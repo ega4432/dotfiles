@@ -35,9 +35,7 @@ else
 fi
 
 if [ "${HOMEBREW_INSTALL_SKIP:-false}" != "true" ]; then
-    if [ ! -d ../log ]; then
-        mkdir ../log
-    fi
+    test -d ../log || mkdir ../log
 
     STD_OUT=../log/brew_stdout.log
     STD_ERR=../log/brew_stderr.log

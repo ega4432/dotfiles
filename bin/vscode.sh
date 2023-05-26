@@ -49,13 +49,9 @@ fi
 if type code &> /dev/null && cd $VSCODE_DOTFILES_DIR &> /dev/null ; then
     echo "---> Installing extensions from $VSCODE_DOTFILES_DIR/$EXTENSIONS_FILE ..."
 
-    if [ ! -d ../log ]; then
-        mkdir ../log
-    fi
-
     while read -r line; do
         echo -n "."
-        code --install-extension "${line}" --force >> ../log/vscode.log 2>&1
+        code --install-extension "${line}" --force || true
     done < $EXTENSIONS_FILE
     echo " Finished installation extensions successfully!"
 else
