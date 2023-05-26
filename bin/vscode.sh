@@ -49,7 +49,7 @@ fi
 if type code &> /dev/null && cd $VSCODE_DOTFILES_DIR &> /dev/null ; then
     echo "---> Installing extensions from $VSCODE_DOTFILES_DIR/$EXTENSIONS_FILE ..."
 
-    if [ -d ../log ]; then
+    if [ ! -d ../log ]; then
         mkdir ../log
     fi
 
