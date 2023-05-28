@@ -21,6 +21,7 @@ packages=(
     tree
     speedtest-cli
     vim
+    1password-cli
 )
 
 sudo apt install -qq "${packages[@]}"
