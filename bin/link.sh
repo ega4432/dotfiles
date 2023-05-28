@@ -33,15 +33,6 @@ if ! cd "$DOTFILES"/zsh &>/dev/null ; then
     ls -ltra "$DOTFILES"
 fi
 
-if [ "$OS" != "Darwin" ]; then
-    echo "---> Install zsh ..."
-    sudo apt install -qq zsh
-    if which zsh | tee -a /etc/shells &>/dev/null ; then
-        chsh -s "$(which zsh)"
-        echo "Updated login shell to \"zsh\" successfully!"
-    fi
-fi
-
 echo "---> Linking zsh files ..."
 find . -type f -name 'zsh*' | sed 's!^.*/!!' | xargs -I {} ln -nfsv $DOTFILES/zsh/{} ~/.{}
 
