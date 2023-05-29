@@ -11,7 +11,10 @@ alias c='clear'
 alias grep="grep --color"
 alias globalip="curl inet-ip.info"
 
+# Git
 alias g="git"
+alias ga="git a"
+alias gs="git s"
 
 # Goland
 alias goland="/usr/local/bin/goland"
