@@ -7,11 +7,15 @@ This is a @ega4432's dotfiles repository.
 
 ## Usage
 
-```shell
-# macOS
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
+macOS
 
-# Ubuntu
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
+```
+
+Ubuntu
+
+```shell
 /bin/bash -c "$(wget -qO - https://raw.githubusercontent.com/ega4432/dotfiles/main/install.sh)"
 ```
 
