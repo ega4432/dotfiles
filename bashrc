@@ -4,6 +4,7 @@ alias ls='ls -G'
 alias ll='ls -lG'
 alias la='ls -laG'
 alias sl='ls'
+alias ll='ls -ltra'
 
 alias mv='mv -i'
 alias cp='cp -i'
@@ -25,4 +26,6 @@ eval "$(starship init bash)"
 # homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-export PATH="$HOME/.rd/bin:$PATH"
+# asdf
+. "$(brew --prefix asdf)/libexec/asdf.sh"
+. "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
