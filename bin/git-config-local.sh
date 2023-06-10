@@ -7,7 +7,7 @@ echo "---> Set up .gitconfig.local ..."
 if [ ! -f ~/.gitconfig.local ]; then
   read -p "Please input your email: " -r email
   read -p "Please input your name: " -r name
-  
+
   config="[user]
   \temail = $email
   \tname  = $name"
