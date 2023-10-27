@@ -8,6 +8,10 @@ OS=""
 
 if [ "$(uname -s)" == "Darwin" ]; then
     OS="Darwin"
+    if ! xcode-select --print-path &>/dev/null; then
+        echo "---> Installing command line tools ..."
+        xcode-select --install
+    fi
 elif [ "$(uname -s | cut -c 1-5)" == "Linux" ]; then
     OS="Linux"
 else

@@ -19,9 +19,9 @@ fi
 eval "$(op completion zsh)"; compdef _op op
 
 export PATH="/usr/local/sbin:$PATH"
+export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 
 # Docker & k8s
-source <(kubectl completion zsh)
 source <(argocd completion zsh)
 export KUBECONFIG=$HOME/.kube/config
 
@@ -87,3 +87,9 @@ fi
 
 # asdf
 . $(brew --prefix asdf)/libexec/asdf.sh
+
+# GNU
+PATH="/usr/local/opt/gawk/libexec/gnubin:$PATH"
+
+# rancher desktop
+export PATH="$HOME/.rd/bin:$PATH"

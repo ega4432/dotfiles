@@ -1,5 +1,6 @@
 # General
 alias ll="ls -ltra"
+alias less="less -R"
 alias bat="bat --style='numbers,grid' --theme GitHub"
 alias globalip="curl inet-ip.info"
 alias find="gfind"

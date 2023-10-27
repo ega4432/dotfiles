@@ -14,14 +14,9 @@ echo "---> Setup Homebrew ..."
 
 echo "---> Installing the required tools ..."
 
-if [ "$OS" == "Darwin" ]; then
-    if ! xcode-select --print-path &>/dev/null; then
-        echo "---> Installing command line tools ..."
-        xcode-select --install
-    fi
-else
-    sudo apt update
-    sudo apt install -qq build-essential procps curl file git
+if [ "$OS" != "Darwin" ]; then
+    sudo apt-get update
+    sudo apt-get install -y build-essential procps curl file git
 fi
 
 if ! type brew &>/dev/null ; then
