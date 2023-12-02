@@ -82,5 +82,7 @@
   ],
   "explorer.confirmDragAndDrop": false,
   "files.autoGuessEncoding": true,
-  "editor.inlineSuggest.enabled": true
+  "editor.inlineSuggest.enabled": true,
+  "terminal.integrated.scrollback": 10000,
+  "application.shellEnvironmentResolutionTimeout": 15
 }
