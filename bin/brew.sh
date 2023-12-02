@@ -14,14 +14,9 @@ echo "---> Setup Homebrew ..."
 
 echo "---> Installing the required tools ..."
 
-if [ "$OS" == "Darwin" ]; then
-    if ! xcode-select --print-path &>/dev/null; then
-        echo "---> Installing command line tools ..."
-        xcode-select --install
-    fi
-else
-    sudo apt update
-    sudo apt install -qq build-essential procps curl file git
+if [ "$OS" == "Linux" ]; then
+    sudo apt-get update
+    sudo apt-get install -y build-essential procps curl file git
 fi
 
 if ! type brew &>/dev/null ; then
@@ -29,6 +24,14 @@ if ! type brew &>/dev/null ; then
 
     if [ "$OS" == "Linux" ]; then
         test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    else
+      if [ "$(uname -m)" == "arm64" ]; then
+        # for M1 Mac
+        echo 'export PATH="/opt/homebrew/bin:$PATH"' >> ~/.zshrc
+      else
+        # for intel Mac
+        echo 'alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin brew"' >> ~/.zsh_alias
+      fi
     fi
 else
     echo "Skipped installation of Homebrew CLI because the CLI has been already installed."

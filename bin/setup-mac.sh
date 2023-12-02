@@ -16,16 +16,20 @@ if [ "$OS" != "Darwin" ]; then
     exit 0
 fi
 
-# Show Library folder
-chflags nohidden ~/Library
-
-# Show hidden files
-defaults write com.apple.finder AppleShowAllFiles YES
-
-# Show path bar
-defaults write com.apple.finder ShowPathbar -bool true
-
-# Show status bar
-defaults write com.apple.finder ShowStatusBar -bool true
-
+# Findder
+chflags nohidden ~/Library # Show Library folder
+defaults write com.apple.finder AppleShowAllFiles YES # Show hidden files
+defaults write com.apple.finder ShowPathbar -bool true # Show path bar
+defaults write com.apple.finder ShowStatusBar -bool true # Show status bar
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool "true"
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 killall Finder
+
+# Dock
+defaults write com.apple.dock tilesize -int 15
+defaults write com.apple.dock largesize -int 70
+defaults write com.apple.dock show-recents -bool "false"
+killall Dock
+
+
+

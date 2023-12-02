@@ -1,11 +1,9 @@
 # General
 alias ll="ls -ltra"
+alias less="less -R"
 alias bat="bat --style='numbers,grid' --theme GitHub"
 alias globalip="curl inet-ip.info"
 alias find="gfind"
-
-# Homebrew
-alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin brew"
 
 # Git
 alias g="git"
