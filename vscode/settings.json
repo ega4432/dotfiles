@@ -83,8 +83,6 @@
   "explorer.confirmDragAndDrop": false,
   "files.autoGuessEncoding": true,
   "editor.inlineSuggest.enabled": true,
-  "github.copilot.enable": {
-    "*": false
-  },
-  "terminal.integrated.scrollback": 10000
+  "terminal.integrated.scrollback": 10000,
+  "application.shellEnvironmentResolutionTimeout": 15
 }
