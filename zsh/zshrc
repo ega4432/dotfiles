@@ -8,7 +8,17 @@ setopt hist_no_store
 setopt hist_reduce_blanks
 
 # Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ -d '/home/linuxbrew/.linuxbrew' ]]; then
+ # Linux
+ HOMEBREW_HOME='/home/linuxbrew/.linuxbrew'
+elif [[ -d '/opt/homebrew' ]]; then
+ # M1 Mac
+ HOMEBREW_HOME='/opt/homebrew'
+else
+ # Intel Mac
+ HOMEBREW_HOME='/usr/local'
+fi
+eval "$($HOMEBREW_HOME/bin/brew shellenv)"
 export PATH="/opt/homebrew/bin:$PATH"
 
 # zsh auto compinit
