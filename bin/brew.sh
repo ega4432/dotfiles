@@ -25,13 +25,13 @@ if ! type brew &>/dev/null ; then
     if [ "$OS" == "Linux" ]; then
         test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     else
-      if [ "$(uname -m)" == "arm64" ]; then
+        if [ "$(uname -m)" == "arm64" ]; then
         # for M1 Mac
         echo 'export PATH="/opt/homebrew/bin:$PATH"' >> ~/.zshrc
-      else
+        else
         # for intel Mac
         echo 'alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin brew"' >> ~/.zsh_alias
-      fi
+        fi
     fi
 else
     echo "Skipped installation of Homebrew CLI because the CLI has been already installed."

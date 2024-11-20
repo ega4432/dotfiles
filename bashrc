@@ -21,3 +21,5 @@ eval "$(starship init bash)"
 
 # homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+export PATH="$HOME/.rd/bin:$PATH"
