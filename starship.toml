@@ -29,7 +29,7 @@ $time\
 
 # You can also replace your username with a neat symbol like  to save some space
 [username]
-show_always = true
+show_always = false
 style_user = "bg:#9A348E"
 style_root = "bg:#9A348E"
 format = '[$user ]($style)'
