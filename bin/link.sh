@@ -65,3 +65,10 @@ if [ ! -d ~/.config/gh ]; then
 fi
 
 ln -nfsv "$DOTFILES"/gh.yml ~/.config/gh/config.yml
+
+if [ ! -d ~/.config/ghostty ]; then
+    mkdir ~/.config/ghostty
+fi
+
+ln -nfsv "$DOTFILES"/ghostty_config ~/.config/ghostty/config
+
