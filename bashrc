@@ -10,7 +10,7 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias c='clear'
 alias grep="grep --color"
-alias globalip="curl inet-ip.info"
+alias globalip="curl https://inet-ip.info"
 
 # Git
 alias g="git"
@@ -27,5 +27,6 @@ eval "$(starship init bash)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # asdf
-. "$(brew --prefix asdf)/libexec/asdf.sh"
-. "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+. <(asdf completion bash)
+
