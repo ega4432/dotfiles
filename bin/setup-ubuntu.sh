@@ -17,9 +17,10 @@ if [ "$OS" != "Linux" ]; then
 fi
 
 packages=(
+    net-tools
     jq
-    tree
     speedtest-cli
+    tree
     vim
 )
 
