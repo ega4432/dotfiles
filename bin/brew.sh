@@ -23,6 +23,7 @@ if ! type brew &>/dev/null ; then
     NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     if [ "$OS" == "Linux" ]; then
+        test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
         test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     else
         if [ "$(uname -m)" == "arm64" ]; then

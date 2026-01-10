@@ -48,7 +48,7 @@ Prisma.prisma
 rangav.vscode-thunder-client
 redhat.vscode-yaml
 shardulm94.trailing-spaces
-silvenon.mdx
+unifiedjs.vscode-mdx
 soerenuhrbach.vscode-deepl
 streetsidesoftware.code-spell-checker
 taichi.vscode-textlint

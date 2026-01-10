@@ -33,15 +33,6 @@ if ! cd "$DOTFILES"/zsh &>/dev/null ; then
     ls -ltra "$DOTFILES"
 fi
 
-if [ "$OS" != "Darwin" ]; then
-    echo "---> Install zsh ..."
-    sudo apt install -qq zsh
-    if which zsh | tee -a /etc/shells &>/dev/null ; then
-        chsh -s "$(which zsh)"
-        echo "Updated login shell to \"zsh\" successfully!"
-    fi
-fi
-
 echo "---> Linking zsh files ..."
 find . -type f -name 'zsh*' | sed 's!^.*/!!' | xargs -I {} ln -nfsv $DOTFILES/zsh/{} ~/.{}
 
@@ -51,17 +42,21 @@ echo "---> Linking Brewfile ..."
 ln -nfsv "$DOTFILES"/Brewfile ~/.Brewfile
 
 # Create .config directory
-if [ ! -d ~/.config ]; then
-    mkdir ~/.config
-fi
+mkdir -p ~/.config
 
 echo "--> Linking starship config ..."
 ln -nfsv "$DOTFILES"/starship.toml ~/.config/starship.toml
 
 echo "---> Linking GitHub CLI \"gh\" config files ..."
 
-if [ ! -d ~/.config/gh ]; then
-    mkdir ~/.config/gh
-fi
+mkdir -p ~/.config/gh
 
 ln -nfsv "$DOTFILES"/gh.yml ~/.config/gh/config.yml
+
+mkdir -p ~/.config/ghostty
+if [ -f ~/.config/ghostty/config ]; then
+  rm -f ~/.config/ghostty/config
+fi
+
+ln -nfsv "$DOTFILES"/ghostty_config ~/.config/ghostty/config
+

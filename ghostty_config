@@ -1,0 +1,33 @@
+# General
+cursor-style = block
+font-family = JetBrains Mono
+font-feature = -dlig
+font-feature = -calt
+
+# macos settings
+macos-titlebar-style = tabs
+macos-titlebar-proxy-icon = hidden
+macos-non-native-fullscreen = true
+
+# visor
+quick-terminal-position = top
+quick-terminal-screen = main
+quick-terminal-animation-duration = 0
+quick-terminal-autohide = true
+quick-terminal-size = 100%
+
+# keybinds
+keybind = global:ctrl+enter=toggle_quick_terminal
+keybind = ctrl+m=text:\n
+#keybind = ctrl+enter=text:\n
+keybind = ctrl+i=text:\t
+
+# window settings
+maximize = true
+window-padding-balance = true
+window-theme = ghostty
+background-blur-radius = 20
+background-opacity = 0.8
+initial-window = false
+quit-after-last-window-closed = false
+
