@@ -25,3 +25,7 @@ packages=(
 )
 
 sudo apt install -qq "${packages[@]}"
+
+# Install ghostty
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
+

@@ -42,23 +42,20 @@ echo "---> Linking Brewfile ..."
 ln -nfsv "$DOTFILES"/Brewfile ~/.Brewfile
 
 # Create .config directory
-if [ ! -d ~/.config ]; then
-    mkdir ~/.config
-fi
+mkdir -p ~/.config
 
 echo "--> Linking starship config ..."
 ln -nfsv "$DOTFILES"/starship.toml ~/.config/starship.toml
 
 echo "---> Linking GitHub CLI \"gh\" config files ..."
 
-if [ ! -d ~/.config/gh ]; then
-    mkdir ~/.config/gh
-fi
+mkdir -p ~/.config/gh
 
 ln -nfsv "$DOTFILES"/gh.yml ~/.config/gh/config.yml
 
-if [ ! -d ~/.config/ghostty ]; then
-    mkdir ~/.config/ghostty
+mkdir -p ~/.config/ghostty
+if [ -f ~/.config/ghostty/config ]; then
+  rm -f ~/.config/ghostty/config
 fi
 
 ln -nfsv "$DOTFILES"/ghostty_config ~/.config/ghostty/config
