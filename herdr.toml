@@ -1,0 +1,25 @@
+# herdr — terminal workspace manager for AI coding agents
+# Symlinked to ~/.config/herdr/config.toml by bin/link.sh.
+# Full option reference: `herdr --default-config`
+
+# Skip the first-run onboarding screen.
+onboarding = false
+
+[theme]
+# Inherit the outer terminal (ghostty) ANSI palette, so herdr follows
+# ghostty's "Apple System Colors" light/dark appearance automatically.
+name = "terminal"
+
+[ui]
+# Show agent state (working / blocked / idle) as compact color dots.
+status_indicators = "dots"
+
+[ui.toast]
+# Hand notifications to the outer terminal; ghostty has desktop-notifications = true.
+delivery = "terminal"
+
+[keys]
+# Move between workspaces (spaces) in the sidebar. K = up, J = down (vim-style).
+# Driven from ghostty via Cmd+Shift+Up/Down (sends prefix + Shift+K / Shift+J).
+previous_workspace = "prefix+shift+k"
+next_workspace     = "prefix+shift+j"

@@ -1,18 +1,23 @@
 # General
-cursor-style = block
-font-family = JetBrains Mono
+theme = Apple System Colors
+cursor-style = bar
+font-family = Hack Nerd Font Mono
+font-family = BIZ UDGothic
 font-feature = -dlig
 font-feature = -calt
+mouse-hide-while-typing = true
+window-save-state = always
+desktop-notifications = true
 
 # macos settings
 macos-titlebar-style = tabs
 macos-titlebar-proxy-icon = hidden
 macos-non-native-fullscreen = true
 
-# visor
+# quick terminal
 quick-terminal-position = top
 quick-terminal-screen = main
-quick-terminal-animation-duration = 0
+quick-terminal-animation-duration = 0.3
 quick-terminal-autohide = true
 quick-terminal-size = 100%
 
@@ -22,12 +27,53 @@ keybind = ctrl+m=text:\n
 #keybind = ctrl+enter=text:\n
 keybind = ctrl+i=text:\t
 
+# herdr navigation: cmd(+alt) keys -> herdr prefix (Ctrl+b = \x02)
+# Pane focus (directional). alt = Option key.
+keybind = cmd+alt+left=text:\x02h
+keybind = cmd+alt+down=text:\x02j
+keybind = cmd+alt+up=text:\x02k
+keybind = cmd+alt+right=text:\x02l
+# Tab: jump by number. Ghostty registers its default goto_tab/last_tab on BOTH
+# the physical (digit_N) and logical (N) trigger, so bind both forms to herdr;
+# overriding only one leaves the default alive on the other.
+keybind = cmd+digit_1=text:\x021
+keybind = cmd+1=text:\x021
+keybind = cmd+digit_2=text:\x022
+keybind = cmd+2=text:\x022
+keybind = cmd+digit_3=text:\x023
+keybind = cmd+3=text:\x023
+keybind = cmd+digit_4=text:\x024
+keybind = cmd+4=text:\x024
+keybind = cmd+digit_5=text:\x025
+keybind = cmd+5=text:\x025
+keybind = cmd+digit_6=text:\x026
+keybind = cmd+6=text:\x026
+keybind = cmd+digit_7=text:\x027
+keybind = cmd+7=text:\x027
+keybind = cmd+digit_8=text:\x028
+keybind = cmd+8=text:\x028
+keybind = cmd+digit_9=text:\x029
+keybind = cmd+9=text:\x029
+# Tab: previous / next
+keybind = cmd+shift+left=text:\x02p
+keybind = cmd+shift+right=text:\x02n
+# Space (workspace): previous / next. Overrides ghostty's default
+# cmd+shift+up/down = jump_to_prompt (rarely used inside herdr).
+keybind = cmd+shift+up=text:\x02K
+keybind = cmd+shift+down=text:\x02J
+# Pane: split / close / zoom. Overrides ghostty's own split & zoom so these
+# drive herdr panes instead of nesting ghostty splits.
+keybind = cmd+d=text:\x02v
+keybind = cmd+shift+d=text:\x02-
+keybind = cmd+shift+w=text:\x02x
+keybind = cmd+shift+enter=text:\x02z
+
 # window settings
 maximize = true
 window-padding-balance = true
 window-theme = ghostty
-background-blur-radius = 20
-background-opacity = 0.8
+background-blur-radius = 5
+background-opacity = 0.9
 initial-window = false
 quit-after-last-window-closed = false
 

@@ -60,3 +60,11 @@ fi
 
 ln -nfsv "$DOTFILES"/ghostty_config ~/.config/ghostty/config
 
+echo "---> Linking herdr config ..."
+
+if [ ! -d ~/.config/herdr ]; then
+    mkdir ~/.config/herdr
+fi
+
+ln -nfsv "$DOTFILES"/herdr.toml ~/.config/herdr/config.toml
+
