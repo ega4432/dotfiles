@@ -16,6 +16,9 @@ alias d="docker"
 alias k="kubectl"
 alias kcc="kubectl config current-context"
 
+# Claude Code
+alias ccp="CLAUDE_CONFIG_DIR=$HOME/.claude-personal claude"
+
 # window manager
 alias reset-yabai="brew services restart yabai"
 
