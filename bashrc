@@ -30,3 +30,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 . <(asdf completion bash)
 
+export PATH="$HOME/.local/bin:$PATH"
