@@ -5,6 +5,8 @@ font-family = Hack Nerd Font Mono
 font-family = BIZ UDGothic
 font-feature = -dlig
 font-feature = -calt
+# Match zsh/wcswidth so East Asian ambiguous-width chars (※ etc.) don't desync
+grapheme-width-method = legacy
 mouse-hide-while-typing = true
 window-save-state = always
 desktop-notifications = true
